@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<title>Room3D</title>
+		<style type="text/css">
+			body { margin: 0; overflow: hidden; }
+			canvas { width: 100%; height: 100%; }
+			#rec {position: fixed; bottom: 30px; left: 70px; color: red; font-family: Arial; font-size: 50px; font-weight: 800; letter-spacing: 4px;}
+			#control { width: 10%; min-height: 250px; height: 35%; position: fixed; bottom:30px; right:30px; background-color: #3d3d3d; color: white; border-radius: 20px;}
+			#steer { width: 100%; height: 60%;}
+			#lights {width: 100%; height: 40%; border-top: 0.5px solid black;}
+			table, tr, td {padding:0; margin:auto;}
+			#steer-container {margin:auto; width: 70%; height: 80%; text-align: center; vertical-align: middle; border: 0.5px solid black; cursor: default;}
+			#steer-up:hover, #steer-left:hover, #steer-center:hover, #steer-right:hover, #steer-down:hover { background-color: #696969;}
+			#steer-up {width:100%; height: 30%; border-bottom: 0.5px solid black;}
+			#steer-left {float:left; width:30%; height: 40%; border-right: 0.5px solid black; padding: auto;}
+			#steer-center {float:left; width: 36%; height: 40%;}
+			#steer-right { float:left; width:30%;height: 40%; border-left: 0.5px solid black;}
+			#steer-down {clear:both; width: 100%; height: 30%; border-top: 0.5px solid black;}
+			
+		</style>
+	</head>
+	<body>	
+		<script type="text/javascript" src="js/three.js"></script>
+		<script type="text/javascript" src="js/OrbitControls.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/room.js"></script>
+		<script type="text/javascript" src="js/desk.js"></script>
+		<script type="text/javascript" src="js/bookstand.js"></script>
+		<script type="text/javascript" src="js/bed.js"></script>
+		<script type="text/javascript" src="js/snow.js"></script>
+
+		<div id="rec">&bull;REC</div>
+		<div id="control">
+			<div id="steer">
+				<div id="steer-container">
+					<div id="steer-up">&uArr;</div>
+					<div id="steer-left">&lArr;</div>
+					<div id="steer-center"></div>
+					<div id="steer-right">&rArr;</div>
+					<div id="steer-down">&dArr;</div>
+				</div>
+			</div>
+			<div id="lights">
+				<table>
+					<tr><td colspan='2' style="text-align:center;">Lights:</td></tr>
+					<tr><td><input type="checkbox" id='outside-lamp' checked></td><td>Outside</td></tr>
+					<tr><td><input type="checkbox" id='ceiling-lamp' checked></td><td>Ceiling</td></tr>
+					<tr><td><input type="checkbox" id='desk-lamp' checked></td><td>Desk</td></tr>
+				</table>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/overlay.js"></script>
+	</body>
+</html>
